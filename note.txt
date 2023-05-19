@@ -1,0 +1,24 @@
+1. initalise the folder => npm init-y
+2. install express => npm - express
+3. create git ignore file
+4. create a git ignore files
+5. create a moongo dp cluster and copy  url
+6. create a dot env file to save url => npm i dotenv
+7. require the env as a module in the server file
+8. create a .env file and paste the url copied from the mo go dp 
+
+CONNECT DATABASE
+1. create a database file 
+2. install mongose to help communicate with the database npm i mongoose
+3. require mongoose in the database file 
+4. connect to the database by creating an aync function using a try and catch 
+
+........
+1. Server helps the front the end to communicate with the backend 
+2.
+
+SCHEMA
+1. Schema determine how the data is structure in the database
+
+MIDDLEWARE 
+1. A mmissled is a function that has access to request and response that we are making and getting 
