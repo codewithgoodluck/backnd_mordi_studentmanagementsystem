@@ -2,20 +2,31 @@ const express = require("express");
 const connectDB = require("./connectDB");
 const dotenv = require("dotenv").config();
 const mongoose = require("mongoose");
-const Task = require("./file/taskModel");
 const app = express(express);
 const router = express.Router();
-const task_route = require("./routes/taskRoutes");
-const cors = require('cors')
+const cors = require('cors');
+const userRoute= require('../backend/routes/userRoute');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 
 //middlware
 app.use(cors())
-app.use(express.json());
-app.use(task_route);
 
-router.get("/", (req, res) => {
-  res.send("Request Send me");
-});
+//Routes
+app.get('/', (req,res) =>{
+  res.send('Home page');
+  });
+
+  
+
+//middlewares
+app.use(express.json())
+app.use(cookieParser())
+app.use(express.urlencoded({extended:false}))
+app.use(bodyParser.json())
+
+//Route MiddleWare
+app.use('/api/users', userRoute)
 
 
 
